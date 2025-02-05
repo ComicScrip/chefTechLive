@@ -1,4 +1,4 @@
-import { StyleSheet, ScrollView, Button, Text } from "react-native";
+import { StyleSheet, ScrollView, Text } from "react-native";
 
 const styles = StyleSheet.create({
 	mainContainer: {
@@ -9,10 +9,10 @@ const styles = StyleSheet.create({
 	},
 });
 
-export default function HomeScreen() {
+export default function CreateRecipeScreen() {
 	return (
 		<ScrollView style={styles.mainContainer}>
-			<Text>Ecran listing recettes</Text>
+			<Text>Ecran creation recette</Text>
 		</ScrollView>
 	);
 }
