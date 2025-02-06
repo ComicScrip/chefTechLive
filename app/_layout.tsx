@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import "react-native-reanimated";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
-import { CounterContext, CounterContextProvider } from "@/hooks/useCounter";
+import { RecipesContextProvider } from "@/hooks/useRecipes";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -33,7 +33,7 @@ export default function RootLayout() {
 	}
 
 	return (
-		<CounterContextProvider>
+		<RecipesContextProvider>
 			<ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
 				<Stack>
 					<Stack.Screen name="(tabs)" options={{ headerShown: false }} />
@@ -41,6 +41,6 @@ export default function RootLayout() {
 				</Stack>
 				<StatusBar style="auto" />
 			</ThemeProvider>
-		</CounterContextProvider>
+		</RecipesContextProvider>
 	);
 }

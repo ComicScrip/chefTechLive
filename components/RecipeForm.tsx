@@ -32,15 +32,20 @@ export default function RecipeForm() {
 
 			<Button
 				title="envoyer"
-				onPress={() =>
-					alert(
-						JSON.stringify({
+				onPress={async () => {
+					await fetch("https://chef-tech-api.vercel.app/api/recipes", {
+						method: "POST",
+						body: JSON.stringify({
 							title,
 							picture,
 							timeMinutes: Number.parseInt(timeMinutes, 10),
 						}),
-					)
-				}
+					});
+
+					setTitle("");
+					setPicture("");
+					setTimeMinutes("");
+				}}
 			/>
 		</View>
 	);
