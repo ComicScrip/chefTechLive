@@ -1,3 +1,4 @@
+import RecipeForm from "@/components/RecipeForm";
 import { StyleSheet, ScrollView, Text } from "react-native";
 
 const styles = StyleSheet.create({
@@ -12,7 +13,7 @@ const styles = StyleSheet.create({
 export default function CreateRecipeScreen() {
 	return (
 		<ScrollView style={styles.mainContainer}>
-			<Text>Ecran creation recette</Text>
+			<RecipeForm />
 		</ScrollView>
 	);
 }
